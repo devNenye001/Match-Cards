@@ -80,12 +80,24 @@ function resetGame() {
   seconds = 40;
   matchedCount = 0;
   flipped = [];
-  playGameSound()
   timerDisplay.textContent = `00:40`;
-  cardImages = Array.from(cardContainers).map(div => div.querySelector('img'));
-  cardImages.forEach(img => img.style.visibility = 'hidden');
+  playGameSound
+
+  // Reset images and card divs
   cardContainers.forEach(div => {
+    const img = div.querySelector('img');
+    img.style.visibility = 'hidden';
     div.style.backgroundColor = '#CAB0FF';
+    div.matched = false;
+    div.classList.remove('matched');
+  });
+
+  // Shuffle cards
+  shuffleCards();
+
+  // Re-attach click events cleanly
+  cardContainers.forEach(div => {
+    div.removeEventListener('click', onCardClick); // Remove previous
     div.addEventListener('click', onCardClick);
   });
 }
@@ -171,10 +183,12 @@ newGameBtns[1].addEventListener('click', () => {
 
 //Shuffle Cards
 function shuffleCards() {
-  const sources = cardImages.map(img => img.src);
-  const shuffled = sources.sort(() => 0.5 - Math.random());
+  const images = Array.from(cardContainers).map(div => div.querySelector('img').src);
+  const shuffled = [...images].sort(() => Math.random() - 0.5);
 
-  cardImages.forEach((img, i) => {
+  cardContainers.forEach((div, i) => {
+    const img = div.querySelector('img');
     img.src = shuffled[i];
+    img.style.visibility = 'hidden'; // Make sure they're hidden again
   });
 }
