@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/Assests/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Match Cards</title>
+</head>
+<body>
+    
+    <!-- home page -->
+    <section class="home-page">
+        <div>
+            <h1>MATCH</h1>
+            <h1>CARDS</h1>
+        </div>
+
+        <button class="start" onclick="playSound()">New Game</button>
+
+        <p class="copyRight">@devNenye001</p>
+    </section>
+    
+    <section class="tip-div" style="display: none;">
+        <div class="tip">
+            <div class="heading">
+                <img src="/Assests/download__21_-removebg-preview.png" alt="" height="70px">
+                <h1>How to Play</h1>
+            </div>
+
+            <pre>
+1. You have 40 seconds to match all the cards.
+2. Tap two cards to flip and reveal the emojis.
+3. If the emojis match, they stay open.
+4. If they don’t match, they flip back.
+5. Match all pairs before time runs out to win!
+
+🔥 Tip: Focus and memorize positions quickly — speed is everything!
+            </pre>
+
+            <button onclick="playSound()" id="next">ok</button>
+        </div>
+    </section>
+    <section class="game-page" style="display: none;">
+        <div class="game-div">
+            <div class="game-logo">
+            <h1>MATCH</h1>
+            <h1>CARDS</h1>
+        </div>
+
+        <div class="time">26:00</div>
+        </div>
+
+        <div class="div-container">
+            <div><img src="/Assests/download__21_-removebg-preview.png" alt="burger"></div>
+            <div><img src="/Assests/sandwich.png" alt="sandwich"></div>
+            <div><img src="/Assests/snacks-removebg-preview.png" alt="snack"></div>
+            <div><img src="/Assests/pizza-removebg-preview.png" alt="pizza"></div>
+            <div><img src="/Assests/hotdog-removebg-preview.png" alt="hotdog"></div>
+            <div><img src="/Assests/hotdog-removebg-preview.png" alt="hotdog"></div>
+            <div><img src="/Assests/snacks-removebg-preview.png" alt="snack"></div>
+            <div><img src="/Assests/coke-removebg-preview.png" alt="coke"></div>
+            <div><img src="/Assests/pizza-removebg-preview.png" alt="pizza"></div>
+            <div><img src="/Assests/download__21_-removebg-preview.png" alt="burger"></div>
+            <div><img src="/Assests/coke-removebg-preview.png" alt="coke"></div>
+            <div><img src="/Assests/sandwich.png" alt="sandwich"></div>
+        </div>
+    </section>
+
+
+    <section class="result-page" style="display: none;">
+        <div class="result-div">
+            <div class="myText">
+                <pre class="feedback">🎉
+You did it</pre>
+                <p>🧠 Mermory level: Pro</p>
+                <p>⌛ Finished in: 25 secs</p>
+            </div>
+
+            <button class="start" onclick="playSound()">New Game</button>
+        </div>
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>

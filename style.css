@@ -1,0 +1,332 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+.colours{
+    background-color: #FFF9EF;
+    background-color: #232B34;
+    background-color: #FF6D06;
+    background-color: #CAB0FF;
+    background-color: #A172FF;
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFF9EF;
+}
+
+/* home page */
+
+.home-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #232B34;
+}
+
+.home-page h1{
+    font-size: 150px;
+}
+
+.home-page button{
+    border:2px solid #232B34;
+    background-color: #FF6D06;
+    color: #232B34;
+    width:250px;
+    height: 50px;
+    border-radius: 9px;
+    box-shadow: 4px 4px 1px #232B34;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* tip section */
+.tip-div{
+    background-image: url(/Assests/background.png);
+    background-color: #d3cfc7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #232B34;
+}
+.tip{
+    width: 700px;
+    height: 480px;
+    background-color: #FFF9EF;
+    box-shadow: 4px 4px 1px #232B34;
+    color: #232B34;
+    border:2px solid #232B34;
+    border-radius: 30px;
+}
+
+.heading{
+    font-size: 28px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom:2px solid #232B34;
+}
+
+.tip-div pre{
+    margin: 30px;
+    font-size: 23px;
+    font-weight: bold;
+    text-wrap: wrap;
+}
+
+.tip-div button{
+    border:2px solid #232B34;
+    background-color: #FF6D06;
+    color: #232B34;
+    width:150px;
+    height: 50px;
+    border-radius: 9px;
+    box-shadow: 4px 4px 1px #232B34;
+    font-size: 26px;
+    position: relative;
+    left: 500px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+button:hover{
+    background-color: hsl(25, 100%, 61%);
+    border:2px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+button:active{
+    background-color: hsl(25, 100%, 69%);
+    transform: translateY(5px);
+}
+
+/* game  */
+.game-page{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-page img{
+    height: 90px;
+}
+
+.div-container{
+    width: 680px;
+    height: 550px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border:2px solid #232B34;
+    box-shadow: 4px 4px 1px #232B34;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.div-container div{
+    height: 120px;
+    width: 150px;
+    border:2px solid #232B34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    background-color: #A172FF;
+}
+
+.game-div{
+    width: 650px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+}
+
+.time{
+    margin-top: 30px;
+    font-size: 23px;
+}
+
+/* result page */
+.result-page{
+    background-image: url(/Assests/background.png);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-div{
+    height: 500px;
+    width: 700px;
+    background-color:#FFF9EF;
+    border:2px solid #232B34;
+    box-shadow: 4px 4px 1px #232B34;
+    border-radius: 30px;
+    padding: 40px;
+}
+
+.result-page button{
+    border:2px solid #232B34;
+    background-color: #FF6D06;
+    color: #232B34;
+    width:250px;
+    height: 50px;
+    border-radius: 9px;
+    box-shadow: 4px 4px 1px #232B34;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    left: 30%;
+    top: 25%;
+    transition: transform 0.1s ease;
+}
+
+.result-page button:hover{
+    background-color: hsl(25, 100%, 61%);
+    border:2px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+.result-page button:active{
+    background-color: hsl(25, 100%, 69%);
+    transform: translateY(5px);
+}
+
+.myText{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.myText p{
+    font-size: 36px;
+}
+.myText pre{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px){
+
+    /* home-page */
+    .home-page div{
+        transform: rotate(-90deg);
+        position: relative;
+        top: 30px;
+    }
+
+    .home-page div h1{
+        font-size: 128px;
+    }
+
+    .home-page button{
+        position: relative;
+        top: 80px;
+        margin-bottom: 50px;
+    }
+
+    /* tip page */
+.tip{
+    width: 350px;
+    height: 500px;
+    text-wrap: wrap;
+}
+.tip img{
+    height: 60px;
+}
+.tip h1{
+    font-size: 28px;
+}
+
+.tip pre{
+    font-size: 16px;
+}
+
+.tip button{
+    position: relative;
+    left: 100px;
+    margin-bottom: 30px;
+}
+
+/* game */
+
+.game-page img{
+    height: 50px;
+}
+
+.div-container{
+    width: 350px;
+    height: 410px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border:2px solid #232B34;
+    padding: 10px;
+}
+
+.div-container div{
+    height: 90px;
+    width: 99px;
+    border:2px solid #232B34;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+    background-color: #A172FF;
+}
+
+.game-div{
+    width: 350px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+}
+
+/* result page */
+.result-div{
+    height: 480px;
+    width: 350px;
+}
+
+.result-page button{
+    width:250px;
+    height: 50px;
+    position: relative;
+    top: 15%;
+    left: 0%;
+}
+
+
+.myText p{
+    font-size: 32px;
+}
+.myText pre{
+    font-size: 36px;
+}
+
+}
