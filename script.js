@@ -51,7 +51,7 @@ let flipped = [];
 let matchedCount = 0;
 
 // Timer
-let seconds = 40;
+let seconds = 30;
 let interval;
 
 // Start Flow
@@ -77,10 +77,10 @@ function startGame() {
 }
 
 function resetGame() {
-  seconds = 40;
+  seconds = 30;
   matchedCount = 0;
   flipped = [];
-  timerDisplay.textContent = `00:40`;
+  timerDisplay.textContent = `00:30`;
   playGameSound();
 
   // Reset images and card divs
@@ -164,12 +164,12 @@ function finishGame(won) {
     playWinSound();
     feedbackText.textContent = '🎉\nYou did it';
     memoryLevel.textContent = '🧠 Memory level: Pro';
-    finishedTime.textContent = `⌛ Finished in: ${40 - seconds} secs`;
+    finishedTime.textContent = `⌛ Finished in: ${30 - seconds} secs`;
   } else {
     playLoseSound();
     feedbackText.textContent = '😢\nTime’s Up!';
-    memoryLevel.textContent = '🧠 Memory level: Mid😔';
-    finishedTime.textContent = `⌛ You lasted: 40 secs`;
+    memoryLevel.textContent = '🧠 Memory level: 😔';
+    finishedTime.textContent = `⌛ You lasted: 30 secs`;
   }
 }
 
