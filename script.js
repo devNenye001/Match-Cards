@@ -81,7 +81,7 @@ function resetGame() {
   matchedCount = 0;
   flipped = [];
   timerDisplay.textContent = `00:40`;
-  playGameSound
+  playGameSound();
 
   // Reset images and card divs
   cardContainers.forEach(div => {
